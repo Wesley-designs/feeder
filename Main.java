@@ -13,7 +13,6 @@ public class Main
         System.out.println(i);
         h.simulateOneDay(22);
         System.out.println(h);
-        h.simulateManyDays(5, 10);
-        System.out.println(h);
+        System.out.println(h.simulateManyDays(5, 10));
     }
 }

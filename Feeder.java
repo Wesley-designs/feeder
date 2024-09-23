@@ -33,21 +33,16 @@ public class Feeder {
     public int simulateManyDays(int numBirds, int numDays) 
     {
         int days = 0;
-        days = numDays;
-        for (int i = 0; i >= days; i += 1) 
+        //days = numDays;
+        while (numDays > 0)
         {
-            if(Math.random() < 0.05) 
+            simulateOneDay(numBirds);
+            if (currentFood > 0)
             {
-                currentFood = 0;
-            }
-            else
-            {
-                int eaten = (int)(Math.random() * 41) + 10;
-                currentFood -= eaten * numBirds;
-                if(currentFood < 0) currentFood = 0;
+                days++;
             }
         }
-        return currentFood;
+        return days;
     }
     public int getCurrentFood()
     {

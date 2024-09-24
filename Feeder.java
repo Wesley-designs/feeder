@@ -36,10 +36,22 @@ public class Feeder {
         //days = numDays;
         while (numDays > 0)
         {
-            simulateOneDay(numBirds);
+            if (currentFood == 0)
+            {
+                return days;
+            }
             if (currentFood > 0)
             {
+                simulateOneDay(numBirds);
                 days++;
+            }
+            else
+            {
+                return days;
+            }
+            if (numDays == days)
+            {
+                return days;
             }
         }
         return days;

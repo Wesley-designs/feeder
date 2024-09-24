@@ -4,7 +4,7 @@ public class Main
     {
         Feeder f = new Feeder(500);
         Feeder g = new Feeder(500);
-        Feeder h = new Feeder(5000);
+        Feeder h = new Feeder(1400);
         Feeder i = new Feeder(100);
         System.out.println(f);
         g.simulateOneDay(12);
